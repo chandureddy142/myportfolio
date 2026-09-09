@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunje Chandra Mohan Reddy - Portfolio</title>
+    <meta name="description" content="Portfolio of Gunje Chandra Mohan Reddy — Cybersecurity researcher and VAPT enthusiast skilled in Kali Linux, Nmap, Wireshark, Burp Suite and OWASP ZAP.">
+    <meta property="og:title" content="Gunje Chandra Mohan Reddy - Cybersecurity Portfolio">
+    <meta property="og:description" content="Cybersecurity researcher and VAPT enthusiast. Explore projects, certifications, and technical skills.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#070b12">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23070b12'/%3E%3Ctext x='50' y='66' font-family='Arial,sans-serif' font-size='44' font-weight='700' fill='%2300e5ff' text-anchor='middle'%3ECMR%3C/text%3E%3C/svg%3E">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Work+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    <div class="progress-bar"></div>
+    <div class="back-to-top"></div>
+
+    <!-- Live Praneeth-Style Background Morphing Canvas -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Top Minimal Bar -->
+    <header class="top-nav">
+        <div class="logo">CMR</div>
+        <div class="live-time" title="System Live Time">
+            <span class="live-indicator"></span>
+            <span id="live-time-text">00:00:00</span>
+        </div>
+    </header>
+
+<!-- 1. Centered REGGIE-STYLE Stage (Home) -->
+<section class="stage" id="stage">
+    <!-- Top-Left Greeting above CHANDRA -->
+    <div class="stage-title-group fade-in">
+        <span class="stage-hey">hey, i'm</span>
+    </div>
+
+    <h2 class="stage-bgtext" aria-hidden="true">CHANDRA</h2>
+
+    <div class="stage-center-content">
+        <!-- Center: Avatar -->
+        <div class="stage-avatar-wrap" id="stageAvatar">
+            <svg class="stage-avatar" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs>
+                    <linearGradient id="hoodGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#1e293b"/>
+                        <stop offset="100%" stop-color="#0f172a"/>
+                    </linearGradient>
+                    <linearGradient id="screenGlow" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#10b981"/>
+                        <stop offset="100%" stop-color="#00e5ff"/>
+                    </linearGradient>
+                </defs>
+
+                <text x="25" y="85" fill="#00e5ff" font-family="JetBrains Mono, monospace" font-size="20" opacity="0.8">01</text>
+                <text x="330" y="120" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="22" opacity="0.8">&lt;/&gt;</text>
+                <text x="20" y="340" fill="#8b5cf6" font-family="JetBrains Mono, monospace" font-size="18" opacity="0.7">10</text>
+                <text x="340" y="370" fill="#ff7b00" font-family="JetBrains Mono, monospace" font-size="20" opacity="0.7">$_</text>
+
+                <rect x="90" y="430" width="220" height="14" rx="7" fill="#1e293b"/>
+                <path d="M115 430 L140 360 L260 360 L285 430 Z" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+                <rect x="150" y="330" width="100" height="34" rx="4" fill="url(#screenGlow)" opacity="0.85"/>
+                <rect x="156" y="335" width="88" height="24" rx="2" fill="#0a0e17"/>
+                <rect x="162" y="340" width="30" height="3" fill="#10b981"/>
+                <rect x="162" y="347" width="50" height="3" fill="#00e5ff"/>
+                <rect x="162" y="354" width="20" height="3" fill="#10b981"/>
+
+                <ellipse cx="200" cy="345" rx="70" ry="18" fill="#0a0e17" opacity="0.4"/>
+                <path d="M140 345 C140 260 155 210 200 210 C245 210 260 260 260 345 C260 345 230 330 200 330 C170 330 140 345 140 345 Z" fill="url(#hoodGrad)"/>
+                <path d="M160 225 C160 190 175 165 200 165 C225 165 240 190 240 225 C240 245 225 255 200 255 C175 255 160 245 160 225 Z" fill="#111827"/>
+                <path d="M165 210 C170 175 185 155 200 155 C215 155 230 175 235 210 C220 195 210 190 200 190 C190 190 180 195 165 210 Z" fill="#0b1120"/>
+                <circle cx="200" cy="222" r="3" fill="#00e5ff" opacity="0.9"/>
+                <path d="M158 300 C150 320 148 335 165 345 L195 335 C185 320 178 305 172 295 Z" fill="#111827"/>
+                <path d="M242 300 C250 320 252 335 235 345 L205 335 C215 320 222 305 228 295 Z" fill="#111827"/>
+            </svg>
+        </div>
+
+        <!-- Bottom: Cybersecurity researcher and vapt enthusiast -->
+        <div class="stage-footer-group fade-in">
+            <span class="stage-eyebrow">cybersecurity researcher and vapt enthusiast</span>
+        </div>
+    </div>
+
+    <button class="scroll-indicator" id="scrollToIntro" aria-label="Scroll down">
+        <span>EXPLORE</span>
+        <span class="scroll-line"></span>
+    </button>
+</section>
+
+    <!-- 2. Intro: CMR (White Background with Grid Pattern) -->
+<section class="hero-stage white-intro-section pattern-white-grid" id="intro">
+    <div class="hero-intro fade-in">
+        <div class="terminal-badge">About</div>
+        <br>
+        <p>
+            Based in Andhra Pradesh, India, I am Chandra Mohan Reddy, a 2026 B.Tech graduate in Computer Science and Engineering (Cyber Security). I am deeply fascinated by the mechanics of technology—understanding how systems function, where their vulnerabilities lie, and how to secure them. As a dedicated cybersecurity enthusiast, I combine a strong foundation in <span class="inline-token token-py">Python</span> and <span class="inline-token token-c">C</span> with hands-on expertise in <span class="inline-token token-kali">Kali Linux</span> and industry-standard tools such as <span class="inline-token token-nmap">Nmap</span>, <span class="inline-token token-ws">Wireshark</span>, <span class="inline-token token-burp">Burp Suite</span>, and <span class="inline-token token-zap">OWASP ZAP</span>.
+        </p>
+         <br>
+        <div class="hero-buttons">
+            <a href="#projects" class="cta-button">View My Projects</a>
+            <a href="chandra resume.pdf" download class="cta-button cta-button-secondary">Download Resume</a>
+        </div>
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-number stat-cyan">8.19</div>
+                <div class="stat-label">CGPA</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number stat-emerald">3+</div>
+                <div class="stat-label">Key Certifications</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number stat-indigo">2026</div>
+                <div class="stat-label">Graduation</div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Center: 3D Platform -->
+        <div class="isometric-center-stage fade-in">
+            <div class="iso-platform-wrapper">
+                <div class="iso-base-slab">
+                    <div class="iso-grid-lines"></div>
+
+                    <!-- Kali Linux -->
+                    <div class="iso-tool-card card-kali" title="Kali Linux">
+                        <div class="card-glass-body">
+                            <svg class="tool-svg" viewBox="0 74.28 437.72 363.44">
+                                <linearGradient id="kaliGrad" gradientUnits="userSpaceOnUse" x1="194.59" x2="313.27" y1="356.76" y2="238.08">
+                                    <stop offset="0" stop-color="#00e5ff"/>
+                                    <stop offset="1" stop-color="#2563eb"/>
+                                </linearGradient>
+                                <circle cx="270.5" cy="258.4" fill="url(#kaliGrad)" r="181.7"/>
+                                <path d="m69.93 127.71c-29.46.03-48.95 2.42-48.95 2.42s107.73-5.17 194.03 29.77c2.93 13.12 11.76 34.98 16.51 45.48-13.6 9.4-28.94 18.25-31.33 49.61-2.38 31.36 24.58 58.95 58.01 59.8 31.75 1.69 53.69 1.93 80.28 15.72 25.38 14.03 46.19 56.79 48.25 95.25 2.22-28.53-8.48-89.9-58.45-108.53 69.82 12.22 75.98 63.97 75.98 64 0 0 5.2-59.76-88.67-73.54-11.9-1.74-26.95-3.09-42.17-3.12-75.25.99-77.99-86.79-21.29-91.22 23.5-1.94 51.56 10.74 78.99 23.51-.1 3.41.04 6.44 2.28 9.23 2.24 2.8 10.83 5.85 13.58 7.43 2.74 1.57 11.54 7.17 16.94 14.18 1.17-2.18 10.93-8.54 10.93-8.54s-2.34.05-7.78-1.98c-5.44-2.04-11.9-8.19-12.05-8.55-.16-.35-.26-.91 1.01-1.17.97-.81-1.22-3.46-2.18-4.42-.97-.97-7.43-11.95-7.58-12.21-.15-.25-.2-.5-.66-.81-1.43-.46-7.68.66-7.68.66s-9.62-4.73-12.94-14.91c.05 1.78-1.65 3.73 0 7.83-5.01-2.12-9.32-5.74-12.72-14.68-2.02 5.08 0 8.32 0 8.32s-11.81-3.3-13.7-14.2c-2.08 4.9 0 7.84 0 7.84s-19.26-10.05-51.26-10.2c-21.42-1.96-25.88-39.65-23.9-46 0 0-30.9-16.28-91.72-23.47-22.8-2.7-44.08-3.53-61.76-3.51z" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Nmap -->
+                    <div class="iso-tool-card card-nmap" title="Nmap">
+                        <div class="card-glass-body">
+                            <svg viewBox="0 0 48 48" class="tool-svg">
+                                <circle cx="24" cy="24" r="20" fill="none" stroke="#ff7b00" stroke-width="2.5" opacity="0.4"/>
+                                <circle cx="24" cy="24" r="13" fill="none" stroke="#ff7b00" stroke-width="2.5" opacity="0.6"/>
+                                <circle cx="24" cy="24" r="6" fill="none" stroke="#ff7b00" stroke-width="2.5"/>
+                                <line x1="24" y1="4" x2="24" y2="44" stroke="#ff7b00" stroke-width="2" opacity="0.4"/>
+                                <line x1="4" y1="24" x2="44" y2="24" stroke="#ff7b00" stroke-width="2" opacity="0.4"/>
+                                <circle cx="32" cy="18" r="3" fill="#00e5ff"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Wireshark -->
+                    <div class="iso-tool-card card-wireshark" title="Wireshark">
+                        <div class="card-glass-body">
+                            <svg class="tool-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4C13 12 6 18 6 27c0 8 8 14 18 14s18-6 18-14c0-9-7-15-18-23z" fill="#249eff"/>
+                                <path d="M24 10C16 16 11 20.5 11 27c0 6 6 10.5 13 10.5S37 33 37 27c0-6.5-5-11-13-17z" fill="#0a0e17" opacity="0.4"/>
+                                <path d="M14 27h5l3-7 4 14 3-7h5" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Burp Suite -->
+                    <div class="iso-tool-card card-burp" title="Burp Suite">
+                        <div class="card-glass-body">
+                            <svg class="tool-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="24" cy="26" rx="11" ry="14" fill="#ff6b35"/>
+                                <ellipse cx="24" cy="26" rx="6.5" ry="10" fill="#ffffff" opacity="0.4"/>
+                                <circle cx="19.5" cy="17" r="3" fill="#ff6b35"/>
+                                <circle cx="28.5" cy="17" r="3" fill="#ff6b35"/>
+                                <path d="M13 22 L5 18 M13 30 L5 32 M35 22 L43 18 M35 30 L43 32" stroke="#ff6b35" stroke-width="2.2" stroke-linecap="round"/>
+                                <circle cx="19.5" cy="17" r="1.1" fill="#0a0e17"/>
+                                <circle cx="28.5" cy="17" r="1.1" fill="#0a0e17"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- OWASP ZAP -->
+                    <div class="iso-tool-card card-zap" title="OWASP ZAP">
+                        <div class="card-glass-body">
+                            <svg class="tool-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4 L40 12 V24 C40 34 33 41 24 44 C15 41 8 34 8 24 V12 Z" fill="#3b82f6" opacity="0.25" stroke="#3b82f6" stroke-width="2"/>
+                                <path d="M27 10 L15 26 H22 L19 38 L34 20 H26 Z" fill="#3b82f6"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Kali Terminal -->
+        <div class="hero-terminal-wrap fade-in">
+            <div class="terminal-window" id="interactive-term">
+                <div class="terminal-header">
+                    <span class="term-btn red"></span>
+                    <span class="term-btn yellow"></span>
+                    <span class="term-btn green"></span>
+                    <span class="term-title">kali@chandra:~ (Click to execute)</span>
+                </div>
+                <div class="terminal-body" id="term-body">
+                    <div id="term-history"></div>
+                    <div class="term-line" id="term-input-line">
+                        <span class="term-user" id="prompt-prefix">┌──(kali㉿chandra)-[~]<br>└─$</span>
+                        <span id="current-cmd"></span><span class="cursor-blink"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Education -->
+    <section class="about education-section" id="education">
+        <div class="section-heading-wrap fade-in">
+            <h2 class="section-title">Education</h2>
+            <p class="section-sub">Academic milestones &amp; technical foundation</p>
+        </div>
+
+        <div class="timeline-container fade-in">
+            <svg class="route-path" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M 15,100 C 30,100 35,50 50,50 C 65,50 70,0 85,0" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2, 2" vector-effect="non-scaling-stroke" />
+            </svg>
+            
+            <div class="timeline-step step-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2020</div>
+                <div class="timeline-label">10th Grade</div>
+                <div class="timeline-tooltip">
+                    <strong>100% Passed</strong>
+                    SSC (Secondary School)
+                </div>
+            </div>
+            
+            <div class="timeline-step step-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2023</div>
+                <div class="timeline-label">Diploma</div>
+                <div class="timeline-tooltip">
+                    <strong>79.3% Passed</strong>
+                    Diploma in ECE
+                </div>
+            </div>
+            
+            <div class="timeline-step step-3">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year">2026</div>
+                <div class="timeline-label">B.Tech</div>
+                <div class="timeline-tooltip">
+                    <strong>8.19 CGPA Passed</strong>
+                    B.Tech in CSE (Cyber Security)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Certifications Section -->
+    <section class="certifications-section" id="certifications">
+        <div class="section-heading-wrap fade-in">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-sub">Industry credentials and verified engineering standards</p>
+        </div>
+
+        <div class="cert-grid fade-in">
+            <div class="cert-badge">
+                <div class="cert-image-container">
+                    <img src="images/LA.jpeg" alt="Linux Administration - L&amp;T EduTech">
+                </div>
+                <img src="images/LA.jpeg" class="cert-preview" alt="Linux Administration Certificate Preview">
+                <div class="cert-info">
+                    <h4>Linux Administration</h4>
+                    <span class="cert-issuer">L&amp;T EduTech</span>
+                    <span class="cert-status">Verified Certificate</span>
+                </div>
+            </div>
+
+            <div class="cert-badge">
+                <div class="cert-image-container">
+                    <img src="images/SN.jpeg" alt="Secure Networking - L&amp;T EduTech">
+                </div>
+                <img src="images/SN.jpeg" class="cert-preview" alt="Network Security Certificate Preview">
+                <div class="cert-info">
+                    <h4>Network Security</h4>
+                    <span class="cert-issuer">L&amp;T EduTech</span>
+                    <span class="cert-status">Verified Certificate</span>
+                </div>
+            </div>
+
+            <div class="cert-badge">
+                <div class="cert-image-container">
+                    <img src="images/gcs.png" alt="Google Professional Cybersecurity Certificate">
+                </div>
+                <img src="images/gcs.png" class="cert-preview" alt="Google Cybersecurity Certificate Preview">
+                <div class="cert-info">
+                    <h4>Google Cybersecurity</h4>
+                    <span class="cert-issuer">Coursera</span>
+                    <span class="cert-status">Verified Certificate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Skills Section (White BG + Grid Pattern + Dark Cards) -->
+    <section class="skills-section white-theme-section pattern-white-grid" id="skills">
+        <div class="section-heading-wrap fade-in">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-sub">Security analysis &amp; engineering toolkit</p>
+        </div>
+        <div class="skills fade-in">
+            <div class="skill-card">
+                <div class="skill-icon-wrap">&lt;/&gt;</div>
+                <h3>Programming</h3>
+                <p>C, Python, Bash Scripting</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap">&#127760;</div>
+                <h3>Web Protocols</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap">&#128451;</div>
+                <h3>Database Systems</h3>
+                <p>SQL</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon-wrap">&#128737;</div>
+                <h3>Security Testing</h3>
+                <p>Kali Linux, Nmap, Wireshark, Burp Suite, OWASP ZAP</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Projects Section (White BG + Grid Pattern + Dark Cards) -->
+    <section class="projects white-theme-section pattern-white-grid" id="projects">
+        <div class="section-heading-wrap fade-in">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-sub">Applied defensive and offensive security applications</p>
+        </div>
+        
+        <div class="project-stack">
+           <!-- Project 1 -->
+           <div class="project-card-vertical fade-in">
+                <div class="project-img-square">
+                    <img src="images/psa.png" alt="Password Strength Analyzer">
+                </div>
+                <div class="project-content-vertical">
+                    <h3>Password Strength Analyzer</h3>
+                    <p>Real-time security auditing tool analyzing password strength and breach exposure safely using client-side k-anonymity checks.</p>
+                    <div class="project-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Cryptography</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://safepasswd.web.app/" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo ↗</a>
+                        <a href="https://github.com/chandureddy142" target="_blank" rel="noopener noreferrer" class="project-link">GitHub &lt;/&gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card-vertical fade-in">
+                <div class="project-img-square">
+                    <img src="images/ped.png" alt="Phishing Email Detection using ML">
+                </div>
+                <div class="project-content-vertical">
+                    <h3>Phishing Email Detection (ML)</h3>
+                    <p>Advanced heuristics engine for deep-layer payload and URL inspection to detect and intercept phishing attempts in real time.</p>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Threat Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://phishgaurd.chandureddy.in/" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo ↗</a>
+                        <a href="https://github.com/chandureddy142" target="_blank" rel="noopener noreferrer" class="project-link">GitHub &lt;/&gt;</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card-vertical fade-in">
+                <div class="project-img-square placeholder-img">
+                    <div class="placeholder-content">
+                        <span class="placeholder-number">03</span>
+                        <span class="placeholder-badge">Coming Soon</span>
+                    </div>
+                </div>
+                <div class="project-content-vertical">
+                    <h3>Automated Vulnerability Assessment &amp; Pentest Suite</h3>
+                    <p><em>Recommended VAPT Project:</em> A modular Python-based security scanner designed to automate reconnaissance, map web application attack surfaces, and output executive compliance reports.</p>
+                    <div class="project-tags">
+                        <span class="tag">VAPT</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link" style="opacity: 0.5; cursor: not-allowed;">Updating Soon...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- 7. Contact Section with Interactive Grid Doodle Paper -->
+<section class="contact solid-void-contact" id="contact">
+    <div class="contact-content fade-in">
+        <h2 class="section-title">Let's Connect</h2>
+        <p>Eager to apply penetration testing and infrastructure security skills to dynamic teams and projects.</p>
+        <a href="mailto:gunjechandramohanreddy@gmail.com" class="contact-button">Send Email</a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/gunjechandramohanreddy" target="_blank" title="LinkedIn">LinkedIn</a>
+            <a href="https://github.com/chandureddy142" target="_blank" title="GitHub">GitHub</a>
+        </div>
+        <!-- Animated Autography-Style Signature -->
+        <div class="signature-wrapper">
+            <span class="signature-text">Chandra Mohan Reddy</span>
+        </div>
+    </div>
+
+    <!-- Drawing Pad Widget -->
+    <div class="doodle-paper-container fade-in">
+        <div class="doodle-paper-bar">
+            <div class="doodle-tool-group">
+                <button type="button" class="doodle-btn active" id="tool-pen" title="Fine Pen">✏️ Pen</button>
+                <button type="button" class="doodle-btn" id="tool-marker" title="Marker / Highlighter">🖊️ Marker</button>
+                <button type="button" class="doodle-btn" id="tool-eraser" title="Eraser">🧹 Eraser</button>
+            </div>
+
+            <div class="doodle-color-group">
+                <button type="button" class="color-dot active" data-color="#00e5ff" style="background: #00e5ff;"></button>
+                <button type="button" class="color-dot" data-color="#10b981" style="background: #10b981;"></button>
+                <button type="button" class="color-dot" data-color="#f59e0b" style="background: #f59e0b;"></button>
+                <button type="button" class="color-dot" data-color="#ef4444" style="background: #ef4444;"></button>
+                <button type="button" class="color-dot" data-color="#a855f7" style="background: #a855f7;"></button>
+                <label class="custom-color-picker" title="Custom Color">
+                    🎨
+                    <input type="color" id="doodle-color-input" value="#00e5ff">
+                </label>
+            </div>
+
+            <button type="button" class="doodle-btn doodle-clear" id="doodle-clear-btn" title="Clear Grid Paper">Clear Paper</button>
+        </div>
+
+        <div class="doodle-paper-sheet">
+            <canvas id="doodle-canvas"></canvas>
+            <span class="doodle-placeholder" id="doodle-hint">Leave a note, signature or doodle for fun ✍️</span>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2026 Gunje Chandra Mohan Reddy. All rights reserved.</p>
+    </footer>
+
+    <!-- Normal Box-Type Glassmorphic Dock with Rainbow Border Glow -->
+    <div class="floating-dock-container" id="dockContainer">
+        <nav class="floating-dock glass-dock-box" id="dock">
+            <a href="#stage" class="dock-item item-home active" data-tooltip="Home" aria-label="Home">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+            <a href="#intro" class="dock-item item-about" data-tooltip="About Me" aria-label="About Me">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+            <a href="#education" class="dock-item item-edu" data-tooltip="Education" aria-label="Education">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+            <a href="#certifications" class="dock-item item-certs" data-tooltip="Certificates" aria-label="Certificates">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 15.39l-3.76 2.27.99-4.28-3.32-2.88 4.38-.37L12 6.09l1.71 4.04 4.38.37-3.32 2.88.99 4.28M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+            <a href="#skills" class="dock-item item-skills" data-tooltip="Skills" aria-label="Skills">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+            <a href="#projects" class="dock-item item-projects" data-tooltip="Projects" aria-label="Projects">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+            <a href="#contact" class="dock-item item-contact" data-tooltip="Contact" aria-label="Contact">
+                <span class="dock-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
+                </span>
+                <span class="dock-dot"></span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
