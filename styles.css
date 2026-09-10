@@ -1547,3 +1547,142 @@ footer {
     user-select: none;
     transition: opacity 0.3s;
 }
+/* ============================================================
+   MOBILE & TOUCH INTERACTIVE ENHANCEMENTS
+   (Adds smoother scaling across breakpoints + touch equivalents
+   for hover-only interactions, without changing the desktop look)
+   ============================================================ */
+
+/* Hide the desktop mouse-follow cursor on touch devices — on a
+   phone there's no mouse, so this stray ring/dot was getting stuck
+   on screen instead of following a pointer. */
+@media (hover: none), (pointer: coarse) {
+    .cursor, .cursor-dot { display: none !important; }
+}
+
+/* ---- Tablet range: smoother mid-size layout before the full
+   mobile stack kicks in at 768px ---- */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .top-nav { padding: 1rem 1.8rem; }
+
+    .hero-stage {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 3rem;
+    }
+    .hero-intro { grid-column: 1 / -1; }
+    .hero-terminal-wrap { grid-column: 1 / -1; max-width: 480px; margin: 0 auto; }
+
+    .isometric-center-stage { grid-column: span 1; }
+
+    .skills { grid-template-columns: repeat(2, 1fr); }
+    .cert-grid { grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
+
+    .stats-bar { gap: 1.6rem; flex-wrap: wrap; }
+}
+
+/* ---- Small phones (≤600px) ---- */
+@media (max-width: 600px) {
+    .top-nav { padding: 0.8rem 1.1rem; }
+    .logo { font-size: 1rem; }
+    .live-time { font-size: 0.72rem; gap: 0.35rem; }
+
+    /* Eyebrow badge was overflowing the viewport on narrow phones
+       because of white-space: nowrap on a long phrase */
+    .stage-eyebrow {
+        white-space: normal;
+        text-align: center;
+        max-width: 84vw;
+        line-height: 1.5;
+        font-size: 0.68rem;
+        padding: 0.55rem 1.1rem;
+        letter-spacing: 1px;
+    }
+    .stage-hey { font-size: 1.05rem; }
+    .stage-avatar-wrap { width: min(80vw, 340px); }
+
+    .hero-buttons { flex-direction: column; align-items: stretch; }
+    .hero-buttons .cta-button,
+    .hero-buttons .cta-button-secondary { text-align: center; }
+
+    .stats-bar { flex-wrap: wrap; gap: 1.4rem 1.8rem; padding-top: 1.2rem; }
+    .stat-number { font-size: 1.7rem; }
+
+    .hero-terminal-wrap { max-width: 100%; }
+    .terminal-body { height: 240px; font-size: 0.78rem; padding: 16px; }
+    .term-title { font-size: 0.7rem; }
+
+    .section-heading-wrap { margin-bottom: 2rem; }
+    .section-title { font-size: clamp(1.8rem, 7vw, 2.4rem); }
+
+    .timeline-tooltip { max-width: 220px; font-size: 0.85rem; padding: 1rem; }
+    .timeline-label { font-size: 1.1rem; }
+
+    .cert-badge { padding: 1.3rem; }
+    .cert-image-container { height: 120px; }
+
+    .project-content-vertical { padding: 1.5rem 1.3rem; }
+    .project-content-vertical h3 { font-size: 1.2rem; }
+    .project-content-vertical p { font-size: 0.9rem; }
+
+    .doodle-paper-bar { justify-content: center; gap: 0.5rem; padding: 0.7rem 1rem; }
+    .doodle-btn { font-size: 0.72rem; padding: 0.35rem 0.7rem; }
+    .doodle-paper-sheet { height: 220px; }
+
+    .signature-text { font-size: clamp(1.8rem, 9vw, 2.6rem); }
+
+    .contact-content p { font-size: 1rem; }
+    .social-links { gap: 1.4rem; flex-wrap: wrap; }
+}
+
+/* ---- Very small phones (≤380px) ---- */
+@media (max-width: 380px) {
+    .stage-bgtext { font-size: clamp(16vw, 22vw, 26vw); }
+    .glass-dock-box { gap: 4px; padding: 6px 10px; }
+    .glass-dock-box .dock-item { width: 36px; height: 36px; }
+    .glass-dock-box .dock-icon svg { width: 18px; height: 18px; }
+    .stats-bar { gap: 1rem 1.2rem; }
+    .stat-number { font-size: 1.5rem; }
+}
+
+/* ---- Touch tap-feedback + tap-to-reveal (replaces :hover-only
+   interactions that never fire on a touchscreen) ---- */
+@media (hover: none), (pointer: coarse) {
+    .cta-button:active,
+    .cta-button-secondary:active,
+    .doodle-btn:active,
+    .contact-button:active,
+    .project-link:active { transform: scale(0.96); }
+
+    .skill-card:active,
+    .project-card-vertical:active,
+    .cert-badge:active,
+    .timeline-step:active { transform: scale(0.98); }
+
+    .glass-dock-box .dock-item:active { transform: scale(0.88); }
+
+    .iso-tool-card:active { transform: translateZ(70px) scale(1.08); }
+
+    /* Tap-to-zoom certificate preview (JS toggles .touch-active) */
+    .cert-badge.touch-active .cert-preview {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+        pointer-events: auto !important;
+    }
+
+    /* Tap-to-reveal timeline tooltip (JS toggles .touch-active) */
+    .timeline-step.touch-active .timeline-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .timeline-step.touch-active .timeline-dot {
+        transform: scale(1.4);
+        background: var(--accent);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+        border-color: white;
+    }
+
+    /* Give every tap target a comfortable minimum hit area */
+    .dock-item, .doodle-btn, .color-dot, .project-link { min-height: 36px; }
+}

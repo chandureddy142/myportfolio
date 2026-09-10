@@ -274,7 +274,7 @@ const currentCmd = document.getElementById('current-cmd');
 const promptPrefix = document.getElementById('prompt-prefix');
 
 const commands = [
-    { cmd: "whoami", out: "cmr@cyber-sec-student (Gunje Chandra Mohan Reddy)" },
+    { cmd: "whoami", out: "Gunje Chandra Mohan Reddy" },
     { cmd: "ls", out: "tools.txt    certs.txt" },
     { cmd: "cat certs.txt", out: "1. Linux Administration (L&T)<br>2. Network Security (L&T)<br>3. Google Professional Cybersecurity" },
     { cmd: "cat tools.txt", out: "Kali Linux &bull; Nmap &bull; Wireshark &bull; Burp Suite &bull; OWASP ZAP" },
@@ -479,4 +479,46 @@ if (dCanvas && dSheet) {
             if (dHint) dHint.style.opacity = '1';
         });
     }
+}
+// ==========================================
+// 9. TOUCH-FRIENDLY TAP INTERACTIONS (MOBILE)
+// On touch devices, :hover never fires, so certificate zoom and
+// timeline tooltips (which rely on :hover on desktop) get a tap
+// equivalent here instead.
+// ==========================================
+const isTouchDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+if (isTouchDevice) {
+    // Tap a certificate to zoom it full-screen; tap again (or tap
+    // elsewhere) to close it.
+    document.querySelectorAll('.cert-badge').forEach(badge => {
+        badge.addEventListener('click', (e) => {
+            const wasOpen = badge.classList.contains('touch-active');
+            document.querySelectorAll('.cert-badge.touch-active').forEach(b => b.classList.remove('touch-active'));
+            if (!wasOpen) {
+                badge.classList.add('touch-active');
+            }
+            e.stopPropagation();
+        });
+    });
+
+    // Tap an education timeline step to reveal its detail tooltip;
+    // tap again (or tap elsewhere) to close it.
+    document.querySelectorAll('.timeline-step').forEach(step => {
+        step.addEventListener('click', (e) => {
+            const wasOpen = step.classList.contains('touch-active');
+            document.querySelectorAll('.timeline-step.touch-active').forEach(s => s.classList.remove('touch-active'));
+            if (!wasOpen) {
+                step.classList.add('touch-active');
+            }
+            e.stopPropagation();
+        });
+    });
+
+    // Tapping anywhere else on the page closes any open cert
+    // preview or timeline tooltip.
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.cert-badge.touch-active, .timeline-step.touch-active')
+            .forEach(el => el.classList.remove('touch-active'));
+    });
 }
