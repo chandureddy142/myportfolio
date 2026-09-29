@@ -147,6 +147,7 @@ body {
 .hero-stage,
 .about,
 .certifications-section,
+.security-labs-section,
 .skills-section,
 .projects,
 .contact {
@@ -2069,5 +2070,22 @@ footer {
 
     .projects .project-fixed-content .project-link {
         font-size: 13px !important;
+    }
+}
+
+/* =========================================================
+   SECURITY LABS SPACING OVERRIDE
+   ========================================================= */
+.security-labs-section {
+    padding-top: 6rem !important;
+    padding-bottom: 7rem !important;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .security-labs-section {
+        padding-top: 4rem !important;
+        padding-bottom: 5rem !important;
     }
 }
