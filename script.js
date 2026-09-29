@@ -37,7 +37,9 @@ function drawPraneethCanvas() {
     const inStage = scrollY < (stageHeight * 0.75);
 
     if (inStage || inContact) {
-        requestAnimationFrame(drawPraneethCanvas);
+        setTimeout(() => {
+            requestAnimationFrame(drawPraneethCanvas);
+        }, 150);
         return;
     }
 
@@ -549,3 +551,35 @@ function updateLightSectionsGradient() {
 
 window.addEventListener('scroll', updateLightSectionsGradient, { passive: true });
 window.addEventListener('DOMContentLoaded', updateLightSectionsGradient);
+
+// ==========================================
+// 11. COOKIE & STORAGE CONSENT MANAGER & INPUT ESCAPING
+// ==========================================
+function initCookieConsent() {
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('accept-consent-btn');
+    if (!banner || !acceptBtn) return;
+    
+    if (!localStorage.getItem('cmr_cookie_consent')) {
+        banner.style.display = 'flex';
+    }
+    
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cmr_cookie_consent', 'accepted');
+        banner.style.display = 'none';
+    });
+}
+window.addEventListener('DOMContentLoaded', initCookieConsent);
+
+function escapeHTML(str) {
+    if (typeof str !== 'string') return '';
+    return str.replace(/[&<>'"]/g, 
+        tag => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            "'": '&#39;',
+            '"': '&quot;'
+        }[tag] || tag)
+    );
+}

@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandu Reddy - Portfolio</title>
-    <meta name="description" content="Portfolio of Chandu Reddy — Cybersecurity researcher and VAPT enthusiast skilled in Kali Linux, Nmap, Wireshark, Burp Suite and OWASP ZAP.">
+    <title>Chandu Reddy - Cybersecurity Portfolio</title>
+    <meta name="description" content="Portfolio of Gunje Chandra Mohan Reddy — Cybersecurity researcher and VAPT enthusiast skilled in Kali Linux, Nmap, Wireshark, Burp Suite and OWASP ZAP.">
+    <link rel="canonical" href="https://chandureddy.in/">
+    
+    <!-- Social Preview Tags (Open Graph & Twitter Cards) -->
     <meta property="og:title" content="Chandu Reddy - Cybersecurity Portfolio">
     <meta property="og:description" content="Cybersecurity researcher and VAPT enthusiast. Explore projects, certifications, and technical skills.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chandureddy.in/">
+    <meta property="og:image" content="https://chandureddy.in/images/psa.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chandu Reddy - Cybersecurity Portfolio">
+    <meta name="twitter:description" content="Cybersecurity researcher and VAPT enthusiast. Explore projects, certifications, and technical skills.">
+    <meta name="twitter:image" content="https://chandureddy.in/images/psa.png">
+    
     <meta name="theme-color" content="#070b12">
+    <link rel="manifest" href="manifest.json">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23070b12'/%3E%3Ctext x='50' y='66' font-family='Arial,sans-serif' font-size='44' font-weight='700' fill='%2300e5ff' text-anchor='middle'%3ECMR%3C/text%3E%3C/svg%3E">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Work+Sans:wght@300;400;600&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Privacy-Friendly Analytics (Cloudflare Web Analytics snippet placeholder) -->
+    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_CLOUDFLARE_ANALYTICS_TOKEN"}'></script> -->
 </head>
 <body>
     <div class="cursor"></div>
@@ -616,10 +631,10 @@
     <div class="contact-content fade-in">
         <h2 class="section-title">Let's Connect</h2>
         <p>Eager to apply penetration testing and infrastructure security skills to dynamic teams and projects.</p>
-        <a href="mailto:gunjechandramohanreddy@gmail.com" class="contact-button">Send Email</a>
+        <a href="javascript:void(0)" id="email-contact-btn" class="contact-button" onclick="window.location.href='mailto:'+'gunjechandramohanreddy'+'@'+'gmail.com'">Send Email</a>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/gunjechandramohanreddy" target="_blank" title="LinkedIn">LinkedIn</a>
-            <a href="https://github.com/chandureddy142" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/gunjechandramohanreddy" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+            <a href="https://github.com/chandureddy142" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
         </div>
         <!-- Animated Autography-Style Signature -->
         <div class="signature-wrapper">
@@ -659,8 +674,14 @@
 </section>
 
     <footer>
-        <p>&copy; 2026 Gunje Chandra Mohan Reddy. All rights reserved.</p>
+        <p>&copy; 2026 Gunje Chandra Mohan Reddy. All rights reserved. | <a href="privacy.html" style="color: #94a3b8; text-decoration: underline;">Privacy Policy</a> | <a href="terms.html" style="color: #94a3b8; text-decoration: underline;">Terms of Use</a></p>
     </footer>
+
+    <!-- Minimal Cookie & Storage Consent Banner -->
+    <div id="cookie-consent-banner" class="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #0f172a; border-top: 1px solid #10b981; padding: 1rem 2rem; z-index: 100000; align-items: center; justify-content: space-between; color: #cbd5e1; font-size: 0.85rem; box-shadow: 0 -10px 25px rgba(0,0,0,0.5);">
+        <span>We use browser local storage for interactive portfolio features (doodle pad &amp; clock settings). No tracking cookies are stored.</span>
+        <button id="accept-consent-btn" class="cta-button" style="padding: 0.4rem 1.2rem; font-size: 0.8rem; margin-left: 1rem; cursor: pointer; border: none;">Accept</button>
+    </div>
 
     <!-- Normal Box-Type Glassmorphic Dock with Rainbow Border Glow -->
     <div class="floating-dock-container" id="dockContainer">

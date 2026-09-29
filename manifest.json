@@ -1,0 +1,16 @@
+{
+  "name": "Chandra Mohan Reddy - Cybersecurity Portfolio",
+  "short_name": "Chandra Portfolio",
+  "description": "Portfolio of Gunje Chandra Mohan Reddy — Cybersecurity Researcher & VAPT Lead.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#070b12",
+  "theme_color": "#070b12",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23070b12'/%3E%3Ctext x='50' y='66' font-family='Arial,sans-serif' font-size='44' font-weight='700' fill='%2300e5ff' text-anchor='middle'%3ECMR%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

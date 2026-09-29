@@ -1,0 +1,10 @@
+# Production robots.txt for Chandra Mohan Reddy Portfolio
+User-agent: *
+Allow: /
+
+# Disallow private build artifacts
+Disallow: /.*
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://chandureddy.in/sitemap.xml
