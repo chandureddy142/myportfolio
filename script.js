@@ -522,3 +522,30 @@ if (isTouchDevice) {
             .forEach(el => el.classList.remove('touch-active'));
     });
 }
+
+// ==========================================
+// 10. DYNAMIC SCROLL COLOR MORPH FOR LIGHT SECTIONS
+// Transitions from amber/sand to cyber-mint as you scroll
+// ==========================================
+function updateLightSectionsGradient() {
+    const lightSections = document.querySelectorAll('.pattern-white-grid');
+    if (!lightSections.length) return;
+
+    const scrollY = window.pageYOffset || window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = Math.min(Math.max(scrollY / (docHeight || 1), 0), 1);
+
+    // Morphs hue from warm amber (38°) toward cyber-emerald/mint (155°)
+    const currentHue = Math.round(38 + (155 - 38) * scrollPercent);
+    const ambientColor = `hsla(${currentHue}, 70%, 50%, 0.12)`;
+
+    lightSections.forEach(section => {
+        section.style.backgroundImage = `
+            radial-gradient(ellipse 65% 55% at 50% 40%, ${ambientColor} 0%, transparent 65%),
+            linear-gradient(180deg, #fdfbf7 0%, #f7f9f8 50%, #f0fdf4 100%)
+        `;
+    });
+}
+
+window.addEventListener('scroll', updateLightSectionsGradient, { passive: true });
+window.addEventListener('DOMContentLoaded', updateLightSectionsGradient);
